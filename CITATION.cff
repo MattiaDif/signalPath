@@ -1,0 +1,10 @@
+cff-version: 1.0.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Di Florio"
+  given-names: "Mattia"
+
+title: "Tcl-Vivado"
+version: 1.0.0
+date-released: XX/XX/XXXX
+url: "https://github.com/MattiaDif/Tcl-Vivado"
