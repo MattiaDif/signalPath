@@ -5,6 +5,6 @@ authors:
   given-names: "Mattia"
 
 title: "Tcl-Vivado"
-version: 1.0.0
+version: 0.1
 date-released: XX/XX/XXXX
-url: "https://github.com/MattiaDif/Tcl-Vivado"
+url: "https://github.com/MattiaDif/signalPath"

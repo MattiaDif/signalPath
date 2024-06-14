@@ -1,35 +1,39 @@
-# Tcl-Vivado-init
+```diff
+!WARNING: THIS SOFTWARE IS UNDER DEVELOPMENT
+!ALWAYS REFER TO THE *DEV* BRANCH
+```
+If you need any help or get a strange error while using this software, feel free to ask. It's still under development, I'm plannig to get a first release within the next couple of months (by end of August), documentation included. Every contribute is welcomed!
 
-This repo offers support to anyone who wants to start handling Xiinx Vivado project via Tcl scripts. This is very convenient since it allows to automatize the processes of, but not limited to, project initialization, syhnthesis, implementation, and bistream generation. 
+# signalPath
+*signalPath* is a custom pipeline for designing neuroengineering algorithms. It collects various filters, spike detection algorithms, Hilbert transform, etc. to create a unified framework for neural signal processing and analysis.
 
-Everything has been tested in Xilinx Vivado 2021.2.
+The software is in its early stages of the development. Over time additional features will be included, such as tools for statistical analysis.
+
+The goal is to create a simplified environment consisting of a series of ready-to-use functions collected in a file named `tool.py`.
+
+## What's included
+- txt, h5/hdf5, bin file handling
+- Butterworth, Remez, IIR Hilbert filter
+- Spike detection algorithms
+- Hilbert transform
+- Custom plot suite
+
+## What's in progress
+- Extensive unit testing
+- Plot suite graphic improvements
+- tool.py development (set of ready to use functions which includes all software funtionalities)
+- Descritpive statistics class
+- Software validation for Python > 3.8
 
 ## Installation
-
 To clone this repo open your terminal and run:
 
-`git clone https://github.com/MattiaDif/Tcl-Vivado.git`
+`git clone https://github.com/MattiaDif/signalPath.git`
 
-## Description
+Then go into code/ folder and run (Python 3.8 required):
 
-All the .vhd code are just example files, they have not been tested and/or validated.
+`./prj_init.py`
 
-The /code folder includes:
-- /src folder: example adder.vhd and top_level.vhd file
-- /sim folder: example adder_tb.vhd file
-- /xdc folder: constraint file of Digilent Arty A7
-- init_prj.tcl --> Tcl scipt for Vivado project initialization
-- bistream_prj.tcl --> Tcl script for bistream generation
+to install required packages. It works for both Windows and Linux systems.
 
-# How to use
-
-1) Open Xilinx Vivado
-2) Open the Tcl console (usually found at the bottom of the Vivado window)
-3) Locate the script using the command: `cd "path_to_your_script"`
-4) Source the script using the command to initialize the project: `source "path_to_your_script/init_prj.tcl"`
-5) Source the script using the command to generate bitstream: `source "path_to_your_script/bitstream_prj.tcl"`
-
-
-## NOTES
-To contribute refers to the dev branch! Thanks and see you around! :)
 

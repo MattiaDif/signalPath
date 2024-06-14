@@ -1,1 +1,9 @@
-/code/test/*
+code/__pycache__/
+code/test/
+code/grounds/__pycache__/
+code/postproc/__pycache__/
+code/preproc/__pycache__/
+code/proc/__pycache__/
+code/test_data/
+code/linux?venv/
+code/windows_venv/
