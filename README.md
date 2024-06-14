@@ -1,44 +1,39 @@
 ```diff
-! WARNING! THE SOFTWARE IS UNDER DEVELOPMENT
+!WARNING: THIS SOFTWARE IS UNDER DEVELOPMENT
+!ALWAYS REFER TO THE *DEV* BRANCH
 ```
-If you need any help during or get a strange error during or while using this software, feel free to ask for help. It's under development so it'll break! Every contribute is welcomed! :)
+If you need any help or get a strange error while using this software, feel free to ask. It's still under development, I'm plannig to get a first release within the next couple of months (by end of August), documentation included. Every contribute is welcomed!
 
-**ALWAYS REFER TO THE *DEV* BRANCH TO FORK OR WHATEVER!**
+# signalPath
+*signalPath* is a custom pipeline for designing neuroengineering algorithms. It collects various filters, spike detection algorithms, Hilbert transform, etc. to create a unified framework for neural signal processing.
 
-After downloading the software, be sure to have the following Python packages installed (preferably in a virtual environment with Python 3.8):
-- scipy
-- numpy
-- matplotlib
-- h5py
-- warnings
-- MEArec
-- webbrowser
+The software is in its early stages of the development. Over time additional features will be included, such as tools for statistical analysis.
 
-<br />
+The goal is to create a simplified environment consisting of a series of ready-to-use functions collected in a file named `tool.py`.
 
+## What's included
+- txt, h5/hdf5, bin file handling
+- Butterworth, Remez, IIR Hilbert filter
+- Spike detection algorithms
+- Hilbert transform
+- Custom plot suite
 
-# neuroWare
-A project which aspires to be a tool to simplify the development process of digital systems. The goal is to develop specific functionalities in order to get a clear comparison between the outputs of the digital implementation (for microcontroller, FPGA, etc.) and of the exact replica designed in Python. Doing this, a consistent validation of the architecture implementation is gotten.
+## What's in progress
+- Extensive unit testing
+- Plot suite graphic improvements
+- tool.py development (set of ready to use functions which includes all software funtionalities)
+- Descritpive statistics class
+- Software validation for Python > 3.8
 
-Initially, this software aims to be very specific for the neuroengineering field. Indeed, spike detection algorithms, LFP analysis algorithms, IIR filters, etc. will be implemented. However, nothing prevents extending the capabilities making the tool exploitable for different applications. 
+## Installation
+To clone this repo open your terminal and run:
 
-The software is fully integrated with [MEArec](https://github.com/alejoe91/MEArec.git), to generate synthetic biophysical extracellular neural recording on Multi-Electrode Arrays for testing.
+`git clone https://github.com/MattiaDif/signalPath.git`
 
-To give you an example to clarify what I mean, I show an image below:
-<br />
-<br />
+Then go into code/ folder and run:
 
-<img src="https://github.com/MattiaDif/neuroWare/blob/main/img/filtering.png" width="800">
+`./prj_init.py`
 
-<p>
-    <b>Fig.1 - Filtering comparison</b></figcaption>
-</p>
-
-<br />
+to install required packages. It works for both Windows and Linux systems.
 
 
-The picture shows a comparison between a filtering output implemented in Python (available in the neuroWare software) and the output of the exact replica implemented in VHDL.
-
-So, what's the point? I make you an example: do you need a IIR filter to be implemented on FPGA? Cool, desing it in HDL, implement the same filter in Python, give to both implementations the same input testbench (in Fig. 1, MEArec data have been used) and compare the two outputs, that's all. I'm doing this to validate my VHDL architecture. The point is to have software support.
-
-<br />
