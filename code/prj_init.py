@@ -10,10 +10,10 @@ if system == "Linux":
 
     venv_dir = dir_path + "/linux_venv"
 
-    os.system('python3 -m venv ' + venv_dir)
+    os.system('python3.8 -m venv ' + venv_dir)
     print("virtual env created in: " + venv_dir)
 
-    os.system('linux_venv/bin/python -m pip install -r ' + dir_path + '/requirements.txt')
+    os.system('linux_venv/bin/python3.8 -m pip install -r ' + dir_path + '/requirements.txt')
 
 elif system == "Windows":
     
