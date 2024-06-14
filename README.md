@@ -5,7 +5,7 @@
 If you need any help or get a strange error while using this software, feel free to ask. It's still under development, I'm plannig to get a first release within the next couple of months (by end of August), documentation included. Every contribute is welcomed!
 
 # signalPath
-*signalPath* is a custom pipeline for designing neuroengineering algorithms. It collects various filters, spike detection algorithms, Hilbert transform, etc. to create a unified framework for neural signal processing.
+*signalPath* is a custom pipeline for designing neuroengineering algorithms. It collects various filters, spike detection algorithms, Hilbert transform, etc. to create a unified framework for neural signal processing and analysis.
 
 The software is in its early stages of the development. Over time additional features will be included, such as tools for statistical analysis.
 
@@ -30,7 +30,7 @@ To clone this repo open your terminal and run:
 
 `git clone https://github.com/MattiaDif/signalPath.git`
 
-Then go into code/ folder and run:
+Then go into code/ folder and run (Python 3.8 required):
 
 `./prj_init.py`
 
