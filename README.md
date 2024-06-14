@@ -1,35 +1,44 @@
-# Tcl-Vivado-init
+```diff
+! WARNING! THE SOFTWARE IS UNDER DEVELOPMENT
+```
+If you need any help during or get a strange error during or while using this software, feel free to ask for help. It's under development so it'll break! Every contribute is welcomed! :)
 
-This repo offers support to anyone who wants to start handling Xiinx Vivado project via Tcl scripts. This is very convenient since it allows to automatize the processes of, but not limited to, project initialization, syhnthesis, implementation, and bistream generation. 
+**ALWAYS REFER TO THE *DEV* BRANCH TO FORK OR WHATEVER!**
 
-Everything has been tested in Xilinx Vivado 2021.2.
+After downloading the software, be sure to have the following Python packages installed (preferably in a virtual environment with Python 3.8):
+- scipy
+- numpy
+- matplotlib
+- h5py
+- warnings
+- MEArec
+- webbrowser
 
-## Installation
-
-To clone this repo open your terminal and run:
-
-`git clone https://github.com/MattiaDif/Tcl-Vivado.git`
-
-## Description
-
-All the .vhd code are just example files, they have not been tested and/or validated.
-
-The /code folder includes:
-- /src folder: example adder.vhd and top_level.vhd file
-- /sim folder: example adder_tb.vhd file
-- /xdc folder: constraint file of Digilent Arty A7
-- init_prj.tcl --> Tcl scipt for Vivado project initialization
-- bistream_prj.tcl --> Tcl script for bistream generation
-
-# How to use
-
-1) Open Xilinx Vivado
-2) Open the Tcl console (usually found at the bottom of the Vivado window)
-3) Locate the script using the command: `cd "path_to_your_script"`
-4) Source the script using the command to initialize the project: `source "path_to_your_script/init_prj.tcl"`
-5) Source the script using the command to generate bitstream: `source "path_to_your_script/bitstream_prj.tcl"`
+<br />
 
 
-## NOTES
-To contribute refers to the dev branch! Thanks and see you around! :)
+# neuroWare
+A project which aspires to be a tool to simplify the development process of digital systems. The goal is to develop specific functionalities in order to get a clear comparison between the outputs of the digital implementation (for microcontroller, FPGA, etc.) and of the exact replica designed in Python. Doing this, a consistent validation of the architecture implementation is gotten.
 
+Initially, this software aims to be very specific for the neuroengineering field. Indeed, spike detection algorithms, LFP analysis algorithms, IIR filters, etc. will be implemented. However, nothing prevents extending the capabilities making the tool exploitable for different applications. 
+
+The software is fully integrated with [MEArec](https://github.com/alejoe91/MEArec.git), to generate synthetic biophysical extracellular neural recording on Multi-Electrode Arrays for testing.
+
+To give you an example to clarify what I mean, I show an image below:
+<br />
+<br />
+
+<img src="https://github.com/MattiaDif/neuroWare/blob/main/img/filtering.png" width="800">
+
+<p>
+    <b>Fig.1 - Filtering comparison</b></figcaption>
+</p>
+
+<br />
+
+
+The picture shows a comparison between a filtering output implemented in Python (available in the neuroWare software) and the output of the exact replica implemented in VHDL.
+
+So, what's the point? I make you an example: do you need a IIR filter to be implemented on FPGA? Cool, desing it in HDL, implement the same filter in Python, give to both implementations the same input testbench (in Fig. 1, MEArec data have been used) and compare the two outputs, that's all. I'm doing this to validate my VHDL architecture. The point is to have software support.
+
+<br />
